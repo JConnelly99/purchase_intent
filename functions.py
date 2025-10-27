@@ -8,7 +8,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("OpenAI API key is not set. Please set the 'OPENAI_API_KEY' environment variable.")
 
-OpenAI.api_key = api_key
+openai.api_key = st.secrets["openai"]["api_key"]
 
 anchors = {
     1: "I definitely would not buy this product.",
