@@ -103,17 +103,14 @@ if st.button("Run Analysis for Multiple Personas"):
             st.subheader("Likert Probabilities")
             st.write(likert_probs)
 
-            st.write("Raw similarity scores:", scores)
-            st.write("Response embedding:", resp_emb)
+            #st.write("Raw similarity scores:", scores)
+            #st.write("Response embedding:", resp_emb)
 
             print(f"The Likert Score for this user is: {max_score_key}")
 
-            # Create a histogram of the Max_Score_Key
-            st.title('Histogram of Max Score Key')
-
-            # Assuming `persona_data` is a DataFrame with a column 'Max_Score_Key'
-            score_counts = persona_data['Max_Score_Key'].value_counts().sort_index()
-
+        # Create a histogram of the Max_Score_Key
+        st.title('Histogram of Max Score Key')
+        
         # Create a Matplotlib figure
         fig, ax = plt.subplots()
         score_counts = persona_data['Max_Score_Key'].value_counts().sort_index()  # Count occurrences of each Max_Score_Key
